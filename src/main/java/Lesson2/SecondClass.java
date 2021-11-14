@@ -92,7 +92,7 @@ public class SecondClass {
             for (int i = 0;i < arr.length; i++){
                 left+=arr[i];
                 int right = 0;
-                for (int j = i+1; j < arr.length;j++) {
+                for (int j = i+1; j < arr.length; j++) {
                     right += arr [j];
                 }
                 key = (right==left);
