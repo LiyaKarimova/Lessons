@@ -10,17 +10,37 @@ public class Main {
 //3. У каждого животного есть ограничения на действия (бег: кот 200 м., собака 500 м.; плавание: кот не умеет плавать, собака 10 м.).
 //4. * Добавить подсчет созданных котов, собак и животных.
 
+
+// 1. Расширить задачу про котов и тарелки с едой.
+// 2. Сделать так, чтобы в тарелке с едой не могло получиться отрицательного количества еды (например, в миске 10 еды, а кот пытается покушать 15-20).
+// 3. Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны). Если коту удалось покушать (хватило еды), сытость = true.
+// 4. Считаем, что если коту мало еды в тарелке, то он её просто не трогает, то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
+// 5. Создать массив котов и тарелку с едой, попросить всех котов покушать из этой тарелки и потом вывести информацию о сытости котов в консоль.
+// 6. Добавить в тарелку метод, с помощью которого можно было бы добавлять еду в тарелку.
+
     public static void main(String[] args) {
-        Dog dogBobic = new Dog ("Бобик",400);
-        Dog dogLinda = new Dog ("Linda", 200);
-        System.out.println(Dog.counterDog);
-        Animal dog1 = new Dog ("Dad", 20);
-        System.out.println(Dog.counterDog);
-        System.out.println(Animal.counterAnimal);
-        System.out.println();
-        Cat catMyrzic = new Cat ("Мурзик", 200);
-        System.out.println(Animal.counterAnimal);
-        System.out.println(Cat.counterCat);
+       Plate p1 = new Plate (100);
+       Cat barsik = new Cat ("Барсик",15);
+       Cat myrzic = new Cat("Мурзик", 70);
+       Cat tihon = new Cat ("Тихон",100);
+//       barsik.eat(p1);
+//       p1.info();
+//       barsik.isFullness();
+       ArrayList <Cat> arrayCat = new ArrayList<>();
+       arrayCat.add (barsik);
+       arrayCat.add(myrzic);
+       arrayCat.add(tihon);
+        for (int i = 0; i < arrayCat.size(); i++) {
+            arrayCat.get (i).eat(p1);
+            arrayCat.get(i).isFullness();
+            p1.info();
+            System.out.println();
+
+        }
+
+
+//       p1.addFood(100);
+//       p1.info();
 
     }
 
