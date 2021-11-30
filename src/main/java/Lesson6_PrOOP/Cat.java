@@ -2,7 +2,7 @@ package Lesson6_PrOOP;
 
 public class Cat extends Animal {
     static int counterCat;
-    private int appetite;
+    public int appetite;
     private boolean fullness;
 
 
@@ -32,16 +32,22 @@ public class Cat extends Animal {
     }
 
     public void eat (Plate p) {
-        if (p.decreaseFood(appetite)) {
+        if (fullness == true) {
+            System.out.println( "нельзя покормить котика. Он сыт.");
+        } else {
+            p.decreaseFood(appetite);
             fullness = true;
+
         }
+
+
     }
 
     public void isFullness (){
         if (fullness) {
-            System.out.println("Кот " + name + " сыт");
+            System.out.println("сыт");
         } else {
-            System.out.println("Кот " + name + " голоден");
+            System.out.println("голоден");
         }
 
     }

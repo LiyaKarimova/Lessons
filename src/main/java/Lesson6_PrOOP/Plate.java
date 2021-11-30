@@ -9,10 +9,11 @@ public class Plate {
 
     public boolean decreaseFood (int n) {
         if (n > food) {
-            System.out.println("В тарелке не достаточно еды");
+            System.out.println(" нельзя покормить, в тарелке не достаточно еды");
             return false;
         } else {
             food = food - n;
+            System.out.println(" покормили");
         }
         return true;
     }

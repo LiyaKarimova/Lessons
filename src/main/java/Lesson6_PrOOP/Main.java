@@ -2,8 +2,17 @@ package Lesson6_PrOOP;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
+
+    public static void main(String[] args) {
+        Game game1 = new Game();
+        game1.startGame();
+    }
+}
+
+    //public static int action;
 
 //1. Создать классы Собака и Кот с наследованием от класса Животное.
 //2. Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия. Результатом выполнения действия будет печать в консоль. (Например, dogBobik.run(150); -> 'Бобик пробежал 150 м.');
@@ -18,31 +27,9 @@ public class Main {
 // 5. Создать массив котов и тарелку с едой, попросить всех котов покушать из этой тарелки и потом вывести информацию о сытости котов в консоль.
 // 6. Добавить в тарелку метод, с помощью которого можно было бы добавлять еду в тарелку.
 
-    public static void main(String[] args) {
-       Plate p1 = new Plate (100);
-       Cat barsik = new Cat ("Барсик",15);
-       Cat myrzic = new Cat("Мурзик", 70);
-       Cat tihon = new Cat ("Тихон",100);
-//       barsik.eat(p1);
-//       p1.info();
-//       barsik.isFullness();
-       ArrayList <Cat> arrayCat = new ArrayList<>();
-       arrayCat.add (barsik);
-       arrayCat.add(myrzic);
-       arrayCat.add(tihon);
-        for (int i = 0; i < arrayCat.size(); i++) {
-            arrayCat.get (i).eat(p1);
-            arrayCat.get(i).isFullness();
-            p1.info();
-            System.out.println();
-
-        }
 
 
-//       p1.addFood(100);
-//       p1.info();
-
-    }
 
 
-}
+
+
